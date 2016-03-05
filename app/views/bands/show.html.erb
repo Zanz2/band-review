@@ -1,24 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag @movie.image.url(:medium) %>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Title:</strong>
+                </td>
+                <td>
+                  <%= @band.title %>
+                </td>
+              </tr>
+              <tr>
+               <td> <strong>Description:</strong></td>
+  <td>><%= @band.description %></td>
+              </tr>
+              <tr>
+               <td> <strong>Band members:</strong></td>
+  <td><%= @band.band_members %></td>
+              </tr>
+              <tr>
+                <td><strong>Rating:</strong></td>
+  <td><%= @band.rating %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <%-# <p id="notice"></p> -%>
-<%= image_tag @band.image.url(:medium) %>
-<p>
-  <strong>Title:</strong>
-  <%= @band.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @band.description %>
-</p>
-
-<p>
-  <strong>Band members:</strong>
-  <%= @band.band_members %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @band.rating %>
-</p>
 
 <%= link_to 'Edit', edit_band_path(@band) %> |
 <%= link_to 'Back', bands_path %>
