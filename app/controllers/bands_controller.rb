@@ -69,6 +69,6 @@ before_action :authenticate_user!, except: [:index, :show]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def band_params
-      params.require(:band).permit(:title, :description, :band_members, :rating)
+      params.require(:band).permit(:title, :description, :band_members, :rating, :image)
     end
 end

@@ -16,6 +16,7 @@
   <tbody>
     <% @bands.each do |band| %>
       <tr>
+        <td><%= image_tag band.image.url(:medium)%></td>
         <td><%= band.title %></td>
         <td><%= band.description %></td>
         <td><%= band.band_members %></td>
