@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_band
   before_action :authenticate_user!
   # GET /reviews
   # GET /reviews.json
@@ -26,9 +27,9 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
-   
+    @review.band_id = @band.id
       if @review.save
-        redirect_to @review
+        redirect_to @band
       else
        render  'new'
       end
@@ -61,7 +62,10 @@ class ReviewsController < ApplicationController
     def set_review
       @review = Review.find(params[:id])
     end
-
+    
+    def set_band
+      @band = Band.find(params[:band_id])
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
       params.require(:review).permit(:rating, :comment)
