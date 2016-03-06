@@ -3,6 +3,15 @@ class BandsController < ApplicationController
 before_action :authenticate_user!, except: [:index, :show]
   # GET /bands
   # GET /bands.json
+  
+  def search
+    if params[:search].present?
+      @bands = Band.search(params[:search])
+    else
+      @bands = Band.all
+    end
+  end
+  
   def index
     @bands = Band.all
   end
