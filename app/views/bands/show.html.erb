@@ -47,6 +47,7 @@
         <% else %>
           <% @reviews.each do |review| %>
             <div class="reviews">
+              <p><%= review.user_id %></p>
               <div class="star-rating" data-score= <%= review.rating %> ></div>
               <p><%= review.comment %></p>
             </div>
@@ -57,8 +58,9 @@
   </div>
 </div>
 <%-# <p id="notice"></p> -%>
-
-<%= link_to 'Edit', edit_band_path(@band) %> |
+<% if current_user.id == @band.user_id %>
+<%= link_to 'Edit', edit_band_path(@band) %> 
+<% end %>
 <%= link_to 'Back', bands_path %>
 
 <script>
