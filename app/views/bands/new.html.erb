@@ -3,15 +3,3 @@
 <%= render 'form' %>
 
 <%= link_to 'Back', bands_path %>
-<a href="javascript:void(0)" id="playsound">Groovy.</a>
-<audio id="sound_effect" class="audio_player" preload="auto">
-    
-    <source src=" http://villagegeek.com/wavfiles/Austin_Powers_groovy.wav" type="audio/mp3">
-</audio>
-<script>
-    $('#playsound').click(function (e) {
-    $('#sound_effect')[0].currentTime = 0;
-    $('#sound_effect')[0].play();
-    return false;
-});
-</script>
