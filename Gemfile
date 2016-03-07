@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+#http://guides.rubyonrails.org/debugging_rails_applications.html         loggi
+#https://devcenter.heroku.com/articles/getting-started-with-rails4#store-your-app-in-git           heroku
+#http://stackoverflow.com/questions/30128977/converting-sqlite3-database-into-postgresql-on-c9-io-for-existing-ruby-on-rails          heroku postgres
+# loggi, heroku, fb twitter login, zvok gumba
 gem 'rails', '4.2.5'
 gem 'sqlite3'
 gem 'pg'
