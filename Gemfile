@@ -7,7 +7,7 @@ source 'https://rubygems.org'
 #http://stackoverflow.com/questions/30128977/converting-sqlite3-database-into-postgresql-on-c9-io-for-existing-ruby-on-rails          heroku postgres
 # loggi, heroku, fb twitter login, zvok gumba
 gem 'rails', '4.2.5'
-# gem 'sqlite3'
+gem 'sqlite3'
 gem 'pg'
 
 # Use SCSS for stylesheets
