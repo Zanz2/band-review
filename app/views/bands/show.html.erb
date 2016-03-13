@@ -59,7 +59,7 @@
 </div>
 <%-# <p id="notice"></p> -%>
 <% if user_signed_in? %>
-<% if user_session.id.to_s == @band.user_id.to_s %>
+<% if current_user.id.to_s == @band.user_id.to_s %>
 <%= link_to 'Edit', edit_band_path(@band) %> 
 <% else %>
 <% end %>
