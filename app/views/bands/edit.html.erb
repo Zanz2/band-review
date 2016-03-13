@@ -1,9 +1,15 @@
 <h1>Editing Band </h1>
+<% if user_signed_in? %>
 <% if current_user.id == @band.user_id %>
 <%= render 'form' %>
 <%= link_to 'Show', @band %> |
 <%= link_to 'Back', bands_path %>
+<% else %>
+ <%= link_to 'Back', bands_path %>
+ <h3>This band isnt yours!</h3>
+<% end %>
  <% else %>
+
  <%= link_to 'Back', bands_path %>
  <h3>This band isnt yours!</h3>
 <% end %>
