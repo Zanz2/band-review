@@ -20,24 +20,7 @@
                 <% else %>
                 <li><%= link_to "Sign Up", new_user_registration_path, class: "active" %></li>
                 <li><%= link_to "Sign In", new_user_session_path, class: "active" %></li>
-                
-                <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1074269392594836',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+                <li><%= link_to "Sign In with facebook", user_omniauth_authorize_path(:facebook), class: "active" %></li>
 
                 
                 <% end %>
