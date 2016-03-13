@@ -58,8 +58,12 @@
   </div>
 </div>
 <%-# <p id="notice"></p> -%>
-<% if current_user.id == @band.user_id %>
+<% if user_signed_in? %>
+<% if user_session.id.to_s == @band.user_id.to_s %>
 <%= link_to 'Edit', edit_band_path(@band) %> 
+<% else %>
+<% end %>
+<% else %>
 <% end %>
 <%= link_to 'Back', bands_path %>
 
