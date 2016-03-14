@@ -8,6 +8,7 @@ source 'https://rubygems.org'
 # loggi, heroku, fb twitter login, zvok gumba
 gem 'rails', '4.2.5'
 #gem 'sqlite3'
+gem 'ruby', '2.2.4'
 
 
 # Use SCSS for stylesheets
