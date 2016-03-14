@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'activities/index'
+
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :bands do
     collection do

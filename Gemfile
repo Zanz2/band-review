@@ -41,8 +41,9 @@ gem "paperclip", '~> 4.3'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'searchkick', '~> 1.2'
 gem 'omniauth-facebook'
-gem "audited-activerecord"
+gem 'public_activity'
 gem 'omniauth-twitter'
+gem "audited-activerecord"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

@@ -1,5 +1,7 @@
 class Band < ActiveRecord::Base
     searchkick
+    include PublicActivity::Model
+    tracked owner: ->(controller, model) { controller && controller.current_user }
     audited
     belongs_to :user
     has_many :reviews
