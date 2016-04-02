@@ -6,14 +6,16 @@ class ApplicationController < ActionController::Base
   hide_action :current_user
   
   def after_sign_in_path_for(resource_or_scope)
-    Log.create(:user => current_user.email, :action => "Login")
+    #Log.create(:user => current_user.email, :action => "Login")
     root_path
   end
   
   def after_sign_up_path_for(resource_or_scope)
-    Log.create(:user => current_user.email, :action => "Register")
+    #Log.create(:user => current_user.email, :action => "Register")
     root_path
   end
+  
+  
   
   
 end

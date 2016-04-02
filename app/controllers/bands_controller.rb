@@ -12,9 +12,17 @@ before_action :authenticate_user!, except: [:index, :show]
     end
   end
   
+  
   def index
     @bands = Band.all
+  
+    @users = User.all
+    
+    #@logs = Logs.find_by(@currentUser)
   end
+  
+  
+  
 
   # GET /bands/1
   # GET /bands/1.json
@@ -23,8 +31,10 @@ before_action :authenticate_user!, except: [:index, :show]
 
     if @reviews.blank?
       @avg_review = 0
+      @no_image = true
     else
       @avg_review = @reviews.average(:rating).round(2)
+      @no_image = false
     end
   end
 

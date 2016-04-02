@@ -2,7 +2,11 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag @band.image.url(:medium) %>
+        <% if (@no_image) then %>
+        <%= image_tag "Avatar.jpg", :size => "450x260", :crop => :fill %>
+        <% else %>
+        <%= image_tag @band.image.url(:medium)%>
+        <% end %>
           <div class="star-rating" data-score= <%= @avg_review %> ></div>
         <em><%= "#{@reviews.length} reviews" %></em>
         
