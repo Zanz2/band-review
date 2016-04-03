@@ -1,2 +1,15 @@
-<%="Trenutni ip naslov:" %>
-<%=request.remote_ip %>
+<%="Current sign in ip adress:" %>
+<%=current_user.current_sign_in_ip %>
+<br>
+<%="Last sign in ip adress:" %>
+<%= current_user.last_sign_in_ip %>
+<br>
+<%="Sign in count:" %>
+<%= current_user.sign_in_count %>
+<br>
+<%="Current sign in at:" %>
+<%= current_user.current_sign_in_at %>
+<br>
+<%="Last sign in at:" %>
+<%= current_user.last_sign_in_at %>
+<br>
